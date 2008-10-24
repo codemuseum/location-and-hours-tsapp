@@ -1,0 +1,75 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  urn: MyString
+  name: MyString
+  street_line1: MyString
+  street_line2: MyString
+  city: MyString
+  state: MyString
+  country: MyString
+  zipcode: MyString
+  phone: MyString
+  fax: MyString
+  link: MyString
+  time_zone: MyString
+  location_note: MyText
+  monday_closed: false
+  monday_opens: 2008-10-23 17:38:06
+  monday_closes: 2008-10-23 17:38:06
+  tuesday_closed: false
+  tuesday_opens: 2008-10-23 17:38:06
+  tuesday_closes: 2008-10-23 17:38:06
+  wednesday_closed: false
+  wednesday_opens: 2008-10-23 17:38:06
+  wednesday_closes: 2008-10-23 17:38:06
+  thursday_closed: false
+  thursday_opens: 2008-10-23 17:38:06
+  thursday_closes: 2008-10-23 17:38:06
+  friday_closed: false
+  friday_opens: 2008-10-23 17:38:06
+  friday_closes: 2008-10-23 17:38:06
+  saturday_closed: false
+  saturday_opens: 2008-10-23 17:38:06
+  saturday_closes: 2008-10-23 17:38:06
+  sunday_closed: false
+  sunday_opens: 2008-10-23 17:38:06
+  sunday_closes: 2008-10-23 17:38:06
+  hours_note: MyText
+
+two:
+  urn: MyString
+  name: MyString
+  street_line1: MyString
+  street_line2: MyString
+  city: MyString
+  state: MyString
+  country: MyString
+  zipcode: MyString
+  phone: MyString
+  fax: MyString
+  link: MyString
+  time_zone: MyString
+  location_note: MyText
+  monday_closed: false
+  monday_opens: 2008-10-23 17:38:06
+  monday_closes: 2008-10-23 17:38:06
+  tuesday_closed: false
+  tuesday_opens: 2008-10-23 17:38:06
+  tuesday_closes: 2008-10-23 17:38:06
+  wednesday_closed: false
+  wednesday_opens: 2008-10-23 17:38:06
+  wednesday_closes: 2008-10-23 17:38:06
+  thursday_closed: false
+  thursday_opens: 2008-10-23 17:38:06
+  thursday_closes: 2008-10-23 17:38:06
+  friday_closed: false
+  friday_opens: 2008-10-23 17:38:06
+  friday_closes: 2008-10-23 17:38:06
+  saturday_closed: false
+  saturday_opens: 2008-10-23 17:38:06
+  saturday_closes: 2008-10-23 17:38:06
+  sunday_closed: false
+  sunday_opens: 2008-10-23 17:38:06
+  sunday_closes: 2008-10-23 17:38:06
+  hours_note: MyText

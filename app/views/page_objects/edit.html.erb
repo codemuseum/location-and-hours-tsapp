@@ -1,0 +1,145 @@
+<% # stylesheets 'scaffold' %>
+<% # javascripts 'prototype', 'effects', 'dragdrop', 'assets' %>
+
+<% fields_for_page_object do |f| %>
+  <p>
+    <%= f.label :urn %><br />
+    <%= f.text_field :urn %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :street_line1 %><br />
+    <%= f.text_field :street_line1 %>
+  </p>
+  <p>
+    <%= f.label :street_line2 %><br />
+    <%= f.text_field :street_line2 %>
+  </p>
+  <p>
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </p>
+  <p>
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </p>
+  <p>
+    <%= f.label :country %><br />
+    <%= f.text_field :country %>
+  </p>
+  <p>
+    <%= f.label :zipcode %><br />
+    <%= f.text_field :zipcode %>
+  </p>
+  <p>
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </p>
+  <p>
+    <%= f.label :fax %><br />
+    <%= f.text_field :fax %>
+  </p>
+  <p>
+    <%= f.label :link %><br />
+    <%= f.text_field :link %>
+  </p>
+  <p>
+    <%= f.label :time_zone %><br />
+    <%= f.text_field :time_zone %>
+  </p>
+  <p>
+    <%= f.label :location_note %><br />
+    <%= f.text_area :location_note %>
+  </p>
+  <p>
+    <%= f.label :monday_closed %><br />
+    <%= f.check_box :monday_closed %>
+  </p>
+  <p>
+    <%= f.label :monday_opens %><br />
+    <%= f.datetime_select :monday_opens %>
+  </p>
+  <p>
+    <%= f.label :monday_closes %><br />
+    <%= f.datetime_select :monday_closes %>
+  </p>
+  <p>
+    <%= f.label :tuesday_closed %><br />
+    <%= f.check_box :tuesday_closed %>
+  </p>
+  <p>
+    <%= f.label :tuesday_opens %><br />
+    <%= f.datetime_select :tuesday_opens %>
+  </p>
+  <p>
+    <%= f.label :tuesday_closes %><br />
+    <%= f.datetime_select :tuesday_closes %>
+  </p>
+  <p>
+    <%= f.label :wednesday_closed %><br />
+    <%= f.check_box :wednesday_closed %>
+  </p>
+  <p>
+    <%= f.label :wednesday_opens %><br />
+    <%= f.datetime_select :wednesday_opens %>
+  </p>
+  <p>
+    <%= f.label :wednesday_closes %><br />
+    <%= f.datetime_select :wednesday_closes %>
+  </p>
+  <p>
+    <%= f.label :thursday_closed %><br />
+    <%= f.check_box :thursday_closed %>
+  </p>
+  <p>
+    <%= f.label :thursday_opens %><br />
+    <%= f.datetime_select :thursday_opens %>
+  </p>
+  <p>
+    <%= f.label :thursday_closes %><br />
+    <%= f.datetime_select :thursday_closes %>
+  </p>
+  <p>
+    <%= f.label :friday_closed %><br />
+    <%= f.check_box :friday_closed %>
+  </p>
+  <p>
+    <%= f.label :friday_opens %><br />
+    <%= f.datetime_select :friday_opens %>
+  </p>
+  <p>
+    <%= f.label :friday_closes %><br />
+    <%= f.datetime_select :friday_closes %>
+  </p>
+  <p>
+    <%= f.label :saturday_closed %><br />
+    <%= f.check_box :saturday_closed %>
+  </p>
+  <p>
+    <%= f.label :saturday_opens %><br />
+    <%= f.datetime_select :saturday_opens %>
+  </p>
+  <p>
+    <%= f.label :saturday_closes %><br />
+    <%= f.datetime_select :saturday_closes %>
+  </p>
+  <p>
+    <%= f.label :sunday_closed %><br />
+    <%= f.check_box :sunday_closed %>
+  </p>
+  <p>
+    <%= f.label :sunday_opens %><br />
+    <%= f.datetime_select :sunday_opens %>
+  </p>
+  <p>
+    <%= f.label :sunday_closes %><br />
+    <%= f.datetime_select :sunday_closes %>
+  </p>
+  <p>
+    <%= f.label :hours_note %><br />
+    <%= f.text_area :hours_note %>
+  </p>
+<% end %>
