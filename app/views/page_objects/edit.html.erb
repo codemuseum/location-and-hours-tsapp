@@ -1,145 +1,123 @@
-<% # stylesheets 'scaffold' %>
-<% # javascripts 'prototype', 'effects', 'dragdrop', 'assets' %>
+<% stylesheets 'location-and-hours', 'location-and-hours-edit' -%>
+<% javascripts 'prototype', 'location-and-hours-edit' %>
 
+
+<div class="location">
 <% fields_for_page_object do |f| %>
-  <p>
-    <%= f.label :urn %><br />
-    <%= f.text_field :urn %>
-  </p>
-  <p>
-    <%= f.label :name %><br />
+  <h2>
+    <%= f.label :name, "Location Name" %>
     <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :street_line1 %><br />
-    <%= f.text_field :street_line1 %>
-  </p>
-  <p>
-    <%= f.label :street_line2 %><br />
-    <%= f.text_field :street_line2 %>
-  </p>
-  <p>
-    <%= f.label :city %><br />
-    <%= f.text_field :city %>
-  </p>
-  <p>
-    <%= f.label :state %><br />
-    <%= f.text_field :state %>
-  </p>
-  <p>
-    <%= f.label :country %><br />
-    <%= f.text_field :country %>
-  </p>
-  <p>
-    <%= f.label :zipcode %><br />
-    <%= f.text_field :zipcode %>
-  </p>
-  <p>
-    <%= f.label :phone %><br />
-    <%= f.text_field :phone %>
-  </p>
-  <p>
-    <%= f.label :fax %><br />
-    <%= f.text_field :fax %>
-  </p>
-  <p>
-    <%= f.label :link %><br />
-    <%= f.text_field :link %>
-  </p>
-  <p>
-    <%= f.label :time_zone %><br />
-    <%= f.text_field :time_zone %>
-  </p>
-  <p>
-    <%= f.label :location_note %><br />
-    <%= f.text_area :location_note %>
-  </p>
-  <p>
-    <%= f.label :monday_closed %><br />
-    <%= f.check_box :monday_closed %>
-  </p>
-  <p>
-    <%= f.label :monday_opens %><br />
-    <%= f.datetime_select :monday_opens %>
-  </p>
-  <p>
-    <%= f.label :monday_closes %><br />
-    <%= f.datetime_select :monday_closes %>
-  </p>
-  <p>
-    <%= f.label :tuesday_closed %><br />
-    <%= f.check_box :tuesday_closed %>
-  </p>
-  <p>
-    <%= f.label :tuesday_opens %><br />
-    <%= f.datetime_select :tuesday_opens %>
-  </p>
-  <p>
-    <%= f.label :tuesday_closes %><br />
-    <%= f.datetime_select :tuesday_closes %>
-  </p>
-  <p>
-    <%= f.label :wednesday_closed %><br />
-    <%= f.check_box :wednesday_closed %>
-  </p>
-  <p>
-    <%= f.label :wednesday_opens %><br />
-    <%= f.datetime_select :wednesday_opens %>
-  </p>
-  <p>
-    <%= f.label :wednesday_closes %><br />
-    <%= f.datetime_select :wednesday_closes %>
-  </p>
-  <p>
-    <%= f.label :thursday_closed %><br />
-    <%= f.check_box :thursday_closed %>
-  </p>
-  <p>
-    <%= f.label :thursday_opens %><br />
-    <%= f.datetime_select :thursday_opens %>
-  </p>
-  <p>
-    <%= f.label :thursday_closes %><br />
-    <%= f.datetime_select :thursday_closes %>
-  </p>
-  <p>
-    <%= f.label :friday_closed %><br />
-    <%= f.check_box :friday_closed %>
-  </p>
-  <p>
-    <%= f.label :friday_opens %><br />
-    <%= f.datetime_select :friday_opens %>
-  </p>
-  <p>
-    <%= f.label :friday_closes %><br />
-    <%= f.datetime_select :friday_closes %>
-  </p>
-  <p>
-    <%= f.label :saturday_closed %><br />
-    <%= f.check_box :saturday_closed %>
-  </p>
-  <p>
-    <%= f.label :saturday_opens %><br />
-    <%= f.datetime_select :saturday_opens %>
-  </p>
-  <p>
-    <%= f.label :saturday_closes %><br />
-    <%= f.datetime_select :saturday_closes %>
-  </p>
-  <p>
-    <%= f.label :sunday_closed %><br />
-    <%= f.check_box :sunday_closed %>
-  </p>
-  <p>
-    <%= f.label :sunday_opens %><br />
-    <%= f.datetime_select :sunday_opens %>
-  </p>
-  <p>
-    <%= f.label :sunday_closes %><br />
-    <%= f.datetime_select :sunday_closes %>
-  </p>
-  <p>
-    <%= f.label :hours_note %><br />
-    <%= f.text_area :hours_note %>
-  </p>
-<% end %>
+  </h2>
+
+  <div class="info">
+
+    <div class="street-line1 street">
+      <%= f.label :street_line1, "Street (Line 1)" %> <br/>
+      <%= f.text_field :street_line1 %>
+    </div>
+
+    <div class="street-line2 street">
+      <%= f.label :street_line2,  "Street (Line 2)" %> <br/>
+      <%= f.text_field :street_line2 %>
+    </div>
+    
+    <div class="locality">
+      <div class="city">
+        <%= f.label :city %>
+        <%= f.text_field :city %>
+      </div>
+      
+      <div class="state">
+        <%= f.label :state, "State/Province" %>
+        <%= f.text_field :state %>
+      </div>
+      
+      <div class="zipcode">
+        <%= f.label :zipcode, "Zip" %>
+        <%= f.text_field :zipcode %>
+      </div>
+      
+      <div class="country">
+        <%= f.label :country %>
+        <%= f.country_select :country, ["United States"] %>
+      </div>
+    </div>
+    
+  	<div class="location-note note">
+      <div class="hr"><hr /></div>
+      <%= f.label :location_note %>
+      <%= f.text_area :location_note, :rows => 3 %>
+    </div>
+    
+    <div class="timezone-box">
+    	<div class="hr"><hr /></div>
+    	<div class="timezone">
+        <%= f.label :time_zone %>
+        <%= f.time_zone_select :time_zone, TimeZone.all %>
+    	</div>
+    </div>
+    
+  
+  	<div class="hr"><hr /></div>
+    
+		
+  	<div class="email">
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+  	</div>
+  	
+  	<div class="phone">
+      <%= f.label :phone %>
+      <%= f.text_field :phone %>
+  	</div>
+
+		<div class="fax">
+      <%= f.label :fax %>
+      <%= f.text_field :fax %>
+		</div>
+
+  	<div class="website">
+      <div class="hr"><hr /></div>
+    	<div class="link">
+        <%= f.label :link, 'Website' %>
+        <%= f.text_field :link %>
+    	</div>
+  	</div>
+
+
+
+    <div class="hours-box">
+      <div class="hours">
+        <h3>Business Hours</h3>
+
+        <div class="groups">
+          <% PageObject::DAYS.each do |day| %>
+            <%= render :partial => 'hours_fields', :locals => { :day => day, :f => f } %>
+          <% end %>
+        </div>
+
+        <div class="hours-note note">
+          <%= f.label :hours_note %>
+          <%= f.text_area :hours_note, :rows => 3 %>
+      	</div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="map">
+    <div class="screen">
+      <iframe src="<%=google_maps_url @page_object %>" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" class="map-frame" name="location_and_hours_map_<%= @page_object.id %>_frame"></iframe>
+    </div>
+
+    <div class="directions">
+      <a title="View the new location specified in the fields on the map.">&laquo; Refresh Map with Address</a>
+    </div>
+  </div>
+
+    
+     
+   <div class="clearfix">&nbsp;</div>
+<% end %>  
+</div>

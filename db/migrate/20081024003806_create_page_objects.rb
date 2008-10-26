@@ -3,17 +3,25 @@ class CreatePageObjects < ActiveRecord::Migration
     create_table :page_objects do |t|
       t.string :urn
       t.string :name
+      t.string :time_zone
+      
       t.string :street_line1
       t.string :street_line2
       t.string :city
       t.string :state
       t.string :country
       t.string :zipcode
+      
+      t.string :email
       t.string :phone
       t.string :fax
       t.string :link
-      t.string :time_zone
+      
       t.text :location_note
+      
+      t.boolean :sunday_closed
+      t.time :sunday_opens
+      t.time :sunday_closes
       t.boolean :monday_closed
       t.time :monday_opens
       t.time :monday_closes
@@ -32,13 +40,12 @@ class CreatePageObjects < ActiveRecord::Migration
       t.boolean :saturday_closed
       t.time :saturday_opens
       t.time :saturday_closes
-      t.boolean :sunday_closed
-      t.time :sunday_opens
-      t.time :sunday_closes
+      
       t.text :hours_note
 
       t.timestamps
     end
+    add_index :page_objects, :urn
   end
 
   def self.down

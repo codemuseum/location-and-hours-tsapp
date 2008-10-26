@@ -1,0 +1,22 @@
+<%# displays a collection of days that are all the same hours (or closed)
+  Takes: days_of_week (ordered array of weekday names), opens, closes, closed
+-%>
+
+<div class="group <%=h closed ? ' closed' : '' %>">
+  <span class="label">
+    <% if days_of_week.length == 1 %>
+      <%=h days_of_week.first[0..2] %>:
+    <% elsif days_of_week.length == 2 %>
+      <%=h "#{days_of_week.first[0..2]}, #{days_of_week.last[0..2]}" %>:
+    <% else %>
+      <%=h "#{days_of_week.first[0..2]} - #{days_of_week.last[0..2]}"%>:
+    <% end %>
+  </span>
+	<span class="value">
+    <% if closed then %>
+      Closed
+    <% else %>
+      <%=h opens.strftime("%I:%M%p") %> - <%=h closes.strftime("%I:%M%p") %> 
+    <% end %>
+  </span>
+</div>

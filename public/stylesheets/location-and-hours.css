@@ -1,0 +1,11 @@
+.app-location-and-hours .location h2 {margin:0;padding:0;}
+.app-location-and-hours .location .info { float:left; width:440px; border:1px solid blue; }
+.app-location-and-hours .location .timezone-box {display:none;}
+.app-location-and-hours .location .hours  { margin-top:8px; text-align:center; font-size:90%;}
+.app-location-and-hours .location .hours .label {font-weight:bold;}
+.app-location-and-hours .location .hours h3 { text-decoration:underline;margin:0;padding:0; }
+.app-location-and-hours .location .map { float:right; width:408px; border:1px solid red;}
+.app-location-and-hours .clearfix { clear: both; visibility: hidden; font-size: 1px; line-height: 1px;}
+
+.app-location-and-hours .location .map-frame { height:200px; width:400px;}
+.app-location-and-hours .location .directions {text-align:center;margin-top:5px;}

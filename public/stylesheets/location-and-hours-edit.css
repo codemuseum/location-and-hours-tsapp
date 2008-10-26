@@ -1,0 +1,19 @@
+.app-location-and-hours .location h2 label {font-weight:normal; display:block; font-size:80%;}
+.app-location-and-hours .location h2 input {font-size:120%; font-weight:bold; width:15em;}
+.app-location-and-hours .location .timezone-box {display:block;}
+.app-location-and-hours .location div.street,
+.app-location-and-hours .location .locality div {margin:3px 0px;}
+.app-location-and-hours .location .city, 
+.app-location-and-hours .location .zipcode {float:left; width:49%; }
+.app-location-and-hours .location .state, 
+.app-location-and-hours .location .country {float:right; width:49%; }
+.app-location-and-hours .location .street input,
+.app-location-and-hours .location .city input, 
+.app-location-and-hours .location .zipcode input,
+.app-location-and-hours .location .state input, 
+.app-location-and-hours .location .country select {width:95%;}
+
+.app-location-and-hours .location .location-note {clear:left;}
+.app-location-and-hours .location .note label {display:block;}
+
+.app-location-and-hours a { cursor:pointer; }

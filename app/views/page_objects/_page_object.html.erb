@@ -1,0 +1,117 @@
+
+<div class="location">
+<% if !@page_object.blank? -%>
+<h2><%=h @page_object.name -%></h2>
+
+
+
+<div class="info">
+  <% unless @page_object.street_line1.blank? -%>
+  <div class="street-line1"><%=h @page_object.street_line1 -%></div>
+  <% end -%>
+
+  <% unless @page_object.street_line2.blank? -%>
+  <div class="street-line2"><%=h @page_object.street_line2 -%></div>
+  <% end -%>
+
+  <div class="locality">
+    <% unless @page_object.city.blank? -%>
+    <span class="city"><%=h @page_object.city -%>,</span>
+    <% end -%>
+
+    <span class="state"><%=h @page_object.state -%></span>
+    <span class="zipcode"><%=h @page_object.zipcode -%></span>
+
+    <% if @page_object.country != 'US' && @page_object.country != 'United States' -%>
+    <div class="country"><%=h @page_object.country -%></div>
+    <% end -%>
+  </div>
+  
+  <% unless @page_object.location_note.blank? %>
+  <div class="location-note note">
+    <div class="hr"><hr /></div>
+    <%=h @page_object.location_note -%>
+  </div>
+  <% end %>
+
+  <div class="timezone-box">
+    <div class="hr"><hr /></div>
+    <div class="timezone">
+      <span class="label">Timezone:</span>
+      <span class="value"><%=h @page_object.time_zone -%></span>
+    </div>
+  </div>
+
+  <div class="hr"><hr /></div>
+
+  <% unless @page_object.phone.blank?-%>
+  <div class="phone">
+    <span class="label">Phone:</span>
+    <span class="value"><%=h @page_object.phone -%></span>
+  </div>
+  <% end -%>
+
+  <% unless @page_object.fax.blank? -%>
+  <div class="fax">
+    <span class="label">Fax:</span>
+    <span class="value"><%=h @page_object.fax -%></span>
+  </div>	
+  <% end -%>
+
+  <% unless @page_object.email.blank? -%>
+  <div class="email">
+    <span class="label">Email:</span>
+    <%= obfuscated_mailto(@page_object.email, @page_object.email) -%>
+  </div>
+  <% end -%>
+
+  <% unless @page_object.link.blank? -%>
+  <div class="website">
+    <div class="link">
+      <span class="label">Website:</span>
+      <%=link_to chop_protocol(@page_object.link), @page_object.link %>
+    </div>
+  </div>
+  <% end -%>
+
+
+
+
+  <div class="hours-box">
+    <div class="hours">
+      <h3>Business Hours</h3>
+
+      <div class="groups">
+        <% @page_object.group_days_of_hours.each do |days_of_week, closed, opens, closes| %>
+        <%= render :partial => 'hours_group', 
+        :locals => { :days_of_week => days_of_week, :closed => closed, :opens => opens, :closes => closes } %>
+        <% end %>
+      </div>
+
+      <% unless @page_object.hours_note.blank?  -%>
+      <div class="hours-note note">
+        <span class="label">Note:</span>
+        <span class="value"><%=h @page_object.hours_note %></span>
+      </div>
+      <% end %>
+
+    </div>
+  </div>
+</div>
+
+
+
+<div class="map<%= @page_object.mappable? ? '' : ' no-map' %>">
+  <div class="screen">
+    <iframe src="<%=google_maps_url @page_object %>" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" class="map-frame" name="location_and_hours_map_<%= @page_object.id %>_frame"></iframe>
+  </div>
+
+  <div class="directions">
+    <a href="<%= location_directions_url(@page_object, @page_object.name) %>" title="View the map on Google, and get directions.">Larger Map &amp; Directions &raquo;</a>
+  </div>
+</div>
+
+<div class="clearfix">&nbsp;</div>
+
+<% end -%>
+</div>

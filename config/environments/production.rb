@@ -22,3 +22,8 @@ config.action_controller.asset_host                  = "http://localhost:3016"
 
 # Disable delivery errors, bad email addresses will be ignored
 # config.action_mailer.raise_delivery_errors = false
+
+
+CONFIG_GMAPS_KEY = 'ABQIAAAAM1Xg3KS4pBFHn63v6AkVtBQwI-PFUKQ1Rr6ZwN836wdWTXFfvBQDACI-jhBQO0AvspaH1sj8uGLRQQ'
+CONFIG_GMAPS_DOMAIN = 'sprout.thrivesmart.com'
+

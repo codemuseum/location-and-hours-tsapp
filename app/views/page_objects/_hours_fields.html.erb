@@ -1,0 +1,27 @@
+<%# Takes day, f %>
+<div class="day <%=h day[0..2].downcase %>">
+  <div class="day-name">
+    <%=h day[0..2] %>
+    <%= f.hidden_field "#{day.downcase}_closed" %>
+  </div>
+  
+  <a class="toggler">
+    <span class="thumb">&nbsp;</span>
+    <span class="toggleOn">Open</span>
+    <span class="toggleOff">Closed</span>
+  </a>
+  
+  <div class="times">
+    <span class="opens">
+      <%= (f.time_select "#{day.downcase}_opens", {:minute_step => 15}).gsub(/\(/, '_').gsub(/\)/, '_') %>
+    </span>
+
+    <span class="sep">
+      &mdash;
+    </span>
+
+    <span class="closes">
+      <%= (f.time_select "#{day.downcase}_closes", {:minute_step => 15}).gsub(/\(/, '_').gsub(/\)/, '_') %>
+    </span>
+  </div>
+</div>
