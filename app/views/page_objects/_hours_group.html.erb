@@ -16,7 +16,7 @@
     <% if closed then %>
       Closed
     <% else %>
-      <%=h opens.strftime("%I:%M%p") %> - <%=h closes.strftime("%I:%M%p") %> 
+      <%=h opens.strftime("%I:%M%p").gsub(/^0/, '') %> - <%=h closes.strftime("%I:%M%p").gsub(/^0/, '') %> 
     <% end %>
   </span>
 </div>
