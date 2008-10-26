@@ -4,6 +4,12 @@ var LocationAndHoursEdit = {
       el.getElementsBySelector('.directions a').each(function(a) {
         a.observe('click', function() { LocationAndHoursEdit.updateMap(el); });
       });
+      
+      el.getElementsBySelector('.day').each(function(day) {
+        day.getElementsBySelector('a.toggler').each(function(a) {
+          a.observe('click', function() { LocationAndHoursEdit.updateClosed(day, a); });
+        });
+      });
     });
   },
   
@@ -25,15 +31,23 @@ var LocationAndHoursEdit = {
       "?a="  + escape(location) + 
       "&af=" + escape(location + (name.value ? name.value : ''))
     );
-    
-    // Doesn't support just replacing the src without hitting the back button
-    // var iframe = map.getElementsBySelector('iframe')[0];
-    // var host = iframe.src.substring(0, iframe.src.indexOf('?'))
-    // iframe.src.replace(
-    //   host + 
-    //   "?a="  + escape(location) + 
-    //   "&af=" + escape(location + (name.value ? name.value : ''))
-    // );
+  },
+  
+  updateClosed: function(day, a) {
+    var closed = day.getElementsBySelector('.day-name input')[0];
+    if (closed.value == '' || closed.value == 'false' || closed.value == '0') {  
+      a.removeClassName('toggled-on');
+      day.addClassName('closed');
+      closed.value = 'true';
+      
+    }
+    else {
+      
+      a.addClassName('toggled-on');
+      day.removeClassName('closed');
+      closed.value = 'false';
+      day.getElementsBySelector('select')[0].focus();
+    }
   }
 }
 LocationAndHoursEdit.init();

@@ -1,14 +1,15 @@
 <%# Takes day, f %>
-<div class="day <%=h day[0..2].downcase %>">
+<% closed = f.object.send("#{day.downcase}_closed".to_sym) %>
+<div class="day <%=h day[0..2].downcase %><%= closed ? ' closed' : '' %>">
   <div class="day-name">
     <%=h day[0..2] %>
     <%= f.hidden_field "#{day.downcase}_closed" %>
   </div>
   
-  <a class="toggler">
+  <a class="toggler<%= closed ? '' : ' toggled-on'  %>">
     <span class="thumb">&nbsp;</span>
-    <span class="toggleOn">Open</span>
-    <span class="toggleOff">Closed</span>
+    <span class="toggle-on">Open</span>
+    <span class="toggle-off">Closed</span>
   </a>
   
   <div class="times">

@@ -19,25 +19,25 @@ class CreatePageObjects < ActiveRecord::Migration
       
       t.text :location_note
       
-      t.boolean :sunday_closed
+      t.boolean :sunday_closed, :null => false, :default => false
       t.time :sunday_opens
       t.time :sunday_closes
-      t.boolean :monday_closed
+      t.boolean :monday_closed, :null => false, :default => false
       t.time :monday_opens
       t.time :monday_closes
-      t.boolean :tuesday_closed
+      t.boolean :tuesday_closed, :null => false, :default => false
       t.time :tuesday_opens
       t.time :tuesday_closes
-      t.boolean :wednesday_closed
+      t.boolean :wednesday_closed, :null => false, :default => false
       t.time :wednesday_opens
       t.time :wednesday_closes
-      t.boolean :thursday_closed
+      t.boolean :thursday_closed, :null => false, :default => false
       t.time :thursday_opens
       t.time :thursday_closes
-      t.boolean :friday_closed
+      t.boolean :friday_closed, :null => false, :default => false
       t.time :friday_opens
       t.time :friday_closes
-      t.boolean :saturday_closed
+      t.boolean :saturday_closed, :null => false, :default => false
       t.time :saturday_opens
       t.time :saturday_closes
       
