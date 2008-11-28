@@ -130,6 +130,6 @@ class PageObject < ActiveRecord::Base
   end
   
   def add_link_protocol
-    self.link = 'http://' + self.link unless self.link.index('://')
+    self.link = 'http://' + self.link if self.link && !self.link.index('://')
   end
 end
