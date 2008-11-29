@@ -53,7 +53,7 @@
     	<div class="hr"><hr /></div>
     	<div class="timezone">
         <%= f.label :time_zone %>
-        <%= f.time_zone_select :time_zone, TimeZone.all %>
+        <%= f.time_zone_select :time_zone, ActiveSupport::TimeZone.all %>
     	</div>
     </div>
     
