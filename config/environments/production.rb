@@ -10,7 +10,6 @@ config.cache_classes = true
 # Full error reports are disabled and caching is turned on
 config.action_controller.consider_all_requests_local = false
 config.action_controller.perform_caching             = true
-config.action_view.cache_template_loading            = true
 
 # Use a different cache store in production
 # config.cache_store = :mem_cache_store
@@ -24,6 +23,6 @@ config.action_controller.asset_host                  = "http://location-and-hour
 # config.action_mailer.raise_delivery_errors = false
 
 
-CONFIG_GMAPS_KEY = 'ABQIAAAAM1Xg3KS4pBFHn63v6AkVtBQwI-PFUKQ1Rr6ZwN836wdWTXFfvBQDACI-jhBQO0AvspaH1sj8uGLRQQ'
-CONFIG_GMAPS_DOMAIN = 'sprout.thrivesmart.com'
+CONFIG_GMAPS_KEY = 'ABQIAAAAM1Xg3KS4pBFHn63v6AkVtBQTG_phjJQCSIcx4z49M9zB5oKdcRRI_eZYoOn4cyRSqKtmH_Sxlypg9A'
+CONFIG_GMAPS_DOMAIN = 'location-and-hours.heroku.com'
 
