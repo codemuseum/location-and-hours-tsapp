@@ -27,13 +27,13 @@
 
 .app-location-and-hours .day.closed .times {visibility:hidden;}
 
-.app-location-and-hours .toggler { float:left; margin-left:20px; background:#fff url(/images/toggle/toggle.png) repeat-x; border:1px solid #888; font-size: 80%; overflow: hidden; font-weight:bold; line-height:30px; position: relative; width: 6.1em; text-decoration: none; height: 28px; }
-.app-location-and-hours a.toggler:hover { text-decoration:underline; color: #666; background:#fff url(/images/toggle/toggle.png) repeat-x; }
-.app-location-and-hours a.toggled-on:hover  { text-decoration:underline; color: #fff; background:#194FDB url(/images/toggle/toggle-on.png) repeat-x; }
-.app-location-and-hours .toggled-on { background:#194FDB url(/images/toggle/toggle-on.png) repeat-x; /*border:1px solid #143FAE;*/ }
+.app-location-and-hours .toggler { float:left; margin-left:20px; background:#fff url(/location-and-hours/images/toggle/toggle.png) repeat-x; border:1px solid #888; font-size: 80%; overflow: hidden; font-weight:bold; line-height:30px; position: relative; width: 6.1em; text-decoration: none; height: 28px; }
+.app-location-and-hours a.toggler:hover { text-decoration:underline; color: #666; background:#fff url(/location-and-hours/images/toggle/toggle.png) repeat-x; }
+.app-location-and-hours a.toggled-on:hover  { text-decoration:underline; color: #fff; background:#194FDB url(/location-and-hours/images/toggle/toggle-on.png) repeat-x; }
+.app-location-and-hours .toggled-on { background:#194FDB url(/location-and-hours/images/toggle/toggle-on.png) repeat-x; /*border:1px solid #143FAE;*/ }
 .app-location-and-hours .toggler .toggle-on { color:#fff; padding-left: 5px; display:none; left:0pt; position:absolute; text-align:left; top:0pt; width:60px; }
 .app-location-and-hours .toggler .toggle-off { color:#666; position:absolute; padding-right: 3px; right:0pt; text-align:right; top:0pt; width:60px; }
 .app-location-and-hours .toggled-on .toggle-on { display:block; }
 .app-location-and-hours .toggled-on .toggle-off { display:none; }
-.app-location-and-hours .toggler .thumb { background:#fff url(/images/toggle/thumb.png) repeat-x; border:1px solid #888; height:28px; left:-1px; position:absolute; top:-1px; width:28px; text-indent:-5000px; }
+.app-location-and-hours .toggler .thumb { background:#fff url(/location-and-hours/images/toggle/thumb.png) repeat-x; border:1px solid #888; height:28px; left:-1px; position:absolute; top:-1px; width:28px; text-indent:-5000px; }
 .app-location-and-hours .toggled-on .thumb { left:auto; right:-1px; }

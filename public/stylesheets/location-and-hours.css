@@ -9,7 +9,7 @@
 
 .app-location-and-hours .location .map-frame { height:200px; width:400px;}
 .app-location-and-hours .location .map .screen {
-padding-bottom: 8px; background: transparent url(/images/shadow-back.gif) right bottom no-repeat; background /**/: transparent url(/images/shadow-back.png) right bottom no-repeat;}
+padding-bottom: 8px; background: transparent url(/location-and-hours/images/shadow-back.gif) right bottom no-repeat; background /**/: transparent url(/location-and-hours/images/shadow-back.png) right bottom no-repeat;}
 .app-location-and-hours .location .directions {text-align:center;margin-top:5px;}
 
 .app-location-and-hours .hours .group.closed {font-style:italic;opacity:0.6;}
